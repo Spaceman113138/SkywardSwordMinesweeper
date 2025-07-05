@@ -1,0 +1,89 @@
+[gd_scene load_steps=6 format=3 uid="uid://ehkcn22ov0ki"]
+
+[ext_resource type="Texture2D" uid="uid://b1qiifymsgm68" path="res://rupe icons/SS-GreenRupee.png" id="1_jfovb"]
+[ext_resource type="Texture2D" uid="uid://begg6k15g7jeb" path="res://rupe icons/SS-BlueRupee.png" id="2_w0cmx"]
+[ext_resource type="Texture2D" uid="uid://c1nc435js8i3h" path="res://rupe icons/SS-RedRupee.png" id="3_318i3"]
+[ext_resource type="Texture2D" uid="uid://ujefqvswo0dg" path="res://rupe icons/SS-SilverRupee.png" id="4_klbjd"]
+[ext_resource type="Texture2D" uid="uid://dyaup7vdgfdqy" path="res://rupe icons/SS-GoldRupee.png" id="5_qoa8i"]
+
+[node name="Tips" type="Control"]
+layout_mode = 3
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+grow_horizontal = 0
+grow_vertical = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+mouse_filter = 2
+
+[node name="PanelContainer" type="PanelContainer" parent="."]
+layout_mode = 1
+anchors_preset = 11
+anchor_left = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -225.0
+grow_horizontal = 0
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="PanelContainer"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="PanelContainer/VBoxContainer"]
+layout_mode = 2
+text = "Tips"
+horizontal_alignment = 1
+
+[node name="GridContainer" type="GridContainer" parent="PanelContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 8
+size_flags_vertical = 4
+columns = 2
+
+[node name="TextureRect" type="TextureRect" parent="PanelContainer/VBoxContainer/GridContainer"]
+layout_mode = 2
+texture = ExtResource("1_jfovb")
+expand_mode = 3
+
+[node name="Label" type="Label" parent="PanelContainer/VBoxContainer/GridContainer"]
+layout_mode = 2
+text = "    +1 | 0 Bombs/Rupoors"
+
+[node name="TextureRect2" type="TextureRect" parent="PanelContainer/VBoxContainer/GridContainer"]
+layout_mode = 2
+texture = ExtResource("2_w0cmx")
+expand_mode = 3
+
+[node name="Label2" type="Label" parent="PanelContainer/VBoxContainer/GridContainer"]
+layout_mode = 2
+text = "    +5 | 1-2 Bombs/Rupoors"
+
+[node name="TextureRect3" type="TextureRect" parent="PanelContainer/VBoxContainer/GridContainer"]
+layout_mode = 2
+texture = ExtResource("3_318i3")
+expand_mode = 3
+
+[node name="Label3" type="Label" parent="PanelContainer/VBoxContainer/GridContainer"]
+layout_mode = 2
+text = "  +20 | 3-4 Bombs/Rupoors"
+
+[node name="TextureRect4" type="TextureRect" parent="PanelContainer/VBoxContainer/GridContainer"]
+layout_mode = 2
+texture = ExtResource("4_klbjd")
+expand_mode = 3
+
+[node name="Label4" type="Label" parent="PanelContainer/VBoxContainer/GridContainer"]
+layout_mode = 2
+text = "+100 | 5-6 Bombs/Rupoors"
+
+[node name="TextureRect5" type="TextureRect" parent="PanelContainer/VBoxContainer/GridContainer"]
+layout_mode = 2
+texture = ExtResource("5_qoa8i")
+expand_mode = 3
+
+[node name="Label5" type="Label" parent="PanelContainer/VBoxContainer/GridContainer"]
+layout_mode = 2
+text = "+300 | 7-8 Bombs/Rupoors"
