@@ -27,7 +27,6 @@ func createNewBoard():
 	
 	var board = generateBoard()
 	
-	
 	var xOffset = 0
 	if gridSize[0] % 2 == 1:
 		xOffset = tileSize * (floor(gridSize[0] / 2))

@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="SkywardSwordMinesweeper"
-run/main_scene="uid://c7yijgbuivedw"
+run/main_scene="uid://csljslsvrctl7"
 config/features=PackedStringArray("4.4", "Forward Plus")
 config/icon="res://icon.svg"
 

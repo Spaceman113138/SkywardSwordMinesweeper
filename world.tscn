@@ -16,7 +16,6 @@ zoom = Vector2(5, 5)
 [node name="CanvasLayer" type="CanvasLayer" parent="Camera2D"]
 
 [node name="UI" parent="Camera2D/CanvasLayer" instance=ExtResource("2_fj7yv")]
-anchors_preset = 15
 offset_left = 0.0
 offset_top = 0.0
 
