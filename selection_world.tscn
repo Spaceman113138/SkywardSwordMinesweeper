@@ -1,8 +1,0 @@
-[gd_scene load_steps=2 format=3 uid="uid://csljslsvrctl7"]
-
-[ext_resource type="Script" uid="uid://bti7ftemp67o7" path="res://selection_world.gd" id="1_md2pu"]
-
-[node name="SelectionWorld" type="Node2D"]
-script = ExtResource("1_md2pu")
-
-[node name="Camera2D" type="Camera2D" parent="."]

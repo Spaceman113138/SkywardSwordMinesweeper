@@ -1,0 +1,49 @@
+[gd_scene load_steps=5 format=3 uid="uid://c7yijgbuivedw"]
+
+[ext_resource type="Script" uid="uid://d3va2rai7kfbv" path="res://source/world.gd" id="1_fj7yv"]
+[ext_resource type="PackedScene" uid="uid://daaln6xidicmu" path="res://source/ui.tscn" id="2_fj7yv"]
+[ext_resource type="PackedScene" uid="uid://ehkcn22ov0ki" path="res://source/tips.tscn" id="3_tlwt5"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_tlwt5"]
+font_size = 40
+
+[node name="World" type="Node2D"]
+script = ExtResource("1_fj7yv")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+zoom = Vector2(5, 5)
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="UI" parent="CanvasLayer" instance=ExtResource("2_fj7yv")]
+
+[node name="Tips" parent="CanvasLayer" instance=ExtResource("3_tlwt5")]
+
+[node name="gameOver" type="Control" parent="CanvasLayer"]
+visible = false
+layout_mode = 3
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_top = -40.0
+offset_right = 40.0
+grow_vertical = 0
+
+[node name="text" type="Label" parent="CanvasLayer/gameOver"]
+layout_mode = 0
+offset_left = 240.0
+offset_top = -39.0
+offset_right = 458.0
+offset_bottom = 16.0
+text = "Game Over"
+label_settings = SubResource("LabelSettings_tlwt5")
+
+[node name="restartButton" type="Button" parent="CanvasLayer/gameOver"]
+layout_mode = 0
+offset_left = 480.0
+offset_top = -32.0
+offset_right = 636.0
+offset_bottom = 10.0
+text = "Restart?"
+
+[connection signal="pressed" from="CanvasLayer/gameOver/restartButton" to="." method="_on_restart_button_pressed"]

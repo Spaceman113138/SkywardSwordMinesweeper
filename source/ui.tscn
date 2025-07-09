@@ -1,0 +1,70 @@
+[gd_scene load_steps=5 format=3 uid="uid://daaln6xidicmu"]
+
+[ext_resource type="Script" uid="uid://57m758a871p6" path="res://source/ui.gd" id="1_fyqef"]
+[ext_resource type="ButtonGroup" uid="uid://bga3775ac35ci" path="res://source/DifficultyButtonGroup.tres" id="2_m6e0p"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_xb563"]
+font_size = 30
+
+[sub_resource type="LabelSettings" id="LabelSettings_fyqef"]
+font_size = 30
+
+[node name="UI" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+mouse_filter = 2
+script = ExtResource("1_fyqef")
+
+[node name="PanelContainer" type="PanelContainer" parent="."]
+layout_mode = 1
+offset_right = 813.0
+offset_bottom = 50.0
+
+[node name="HBoxContainer" type="HBoxContainer" parent="PanelContainer"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="PanelContainer/HBoxContainer"]
+layout_mode = 2
+text = "Rupes Made: "
+label_settings = SubResource("LabelSettings_xb563")
+
+[node name="PanelContainer" type="PanelContainer" parent="PanelContainer/HBoxContainer"]
+custom_minimum_size = Vector2(100, 0)
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="rupesMade" type="Label" parent="PanelContainer/HBoxContainer/PanelContainer"]
+layout_mode = 2
+text = "0"
+label_settings = SubResource("LabelSettings_fyqef")
+horizontal_alignment = 1
+
+[node name="Beginner" type="CheckBox" parent="PanelContainer/HBoxContainer"]
+layout_mode = 2
+button_pressed = true
+button_group = ExtResource("2_m6e0p")
+text = "Beginner"
+
+[node name="Intermediate" type="CheckBox" parent="PanelContainer/HBoxContainer"]
+layout_mode = 2
+button_group = ExtResource("2_m6e0p")
+text = "Intermediate"
+
+[node name="Expert" type="CheckBox" parent="PanelContainer/HBoxContainer"]
+layout_mode = 2
+button_group = ExtResource("2_m6e0p")
+text = "Expert"
+
+[node name="Label2" type="Label" parent="PanelContainer/HBoxContainer"]
+layout_mode = 2
+text = "   "
+
+[node name="SwapButton" type="Button" parent="PanelContainer/HBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 30
+text = "Swap Mode"
+
+[connection signal="pressed" from="PanelContainer/HBoxContainer/Beginner" to="." method="_on_beginner_pressed"]
+[connection signal="pressed" from="PanelContainer/HBoxContainer/Intermediate" to="." method="_on_intermediate_pressed"]
+[connection signal="pressed" from="PanelContainer/HBoxContainer/Expert" to="." method="_on_expert_pressed"]
+[connection signal="pressed" from="PanelContainer/HBoxContainer/SwapButton" to="." method="_on_swap_button_pressed"]

@@ -1,0 +1,37 @@
+[gd_scene load_steps=6 format=3 uid="uid://d184vhrlpu71e"]
+
+[ext_resource type="Script" uid="uid://dveho58gaeyba" path="res://source/tile.gd" id="1_n3f48"]
+[ext_resource type="Texture2D" uid="uid://dyaup7vdgfdqy" path="res://rupe icons/SS-GoldRupee.png" id="2_vx4y2"]
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_vx4y2"]
+size = Vector2(20, 20)
+orientation = 2
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_a2t34"]
+
+[sub_resource type="SphereMesh" id="SphereMesh_n3f48"]
+
+[node name="Tile" type="Area2D"]
+script = ExtResource("1_n3f48")
+
+[node name="tileSprite" type="MeshInstance2D" parent="."]
+scale = Vector2(0.9, 0.9)
+mesh = SubResource("PlaneMesh_vx4y2")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_a2t34")
+
+[node name="bomb" type="MeshInstance2D" parent="."]
+visible = false
+modulate = Color(0.217648, 0.403635, 0.865076, 1)
+scale = Vector2(7.50794, 7.5)
+mesh = SubResource("SphereMesh_n3f48")
+
+[node name="ContainSprite" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(-1.19209e-07, 0)
+scale = Vector2(0.015, 0.015)
+texture = ExtResource("2_vx4y2")
+
+[connection signal="mouse_entered" from="." to="." method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="." to="." method="_on_mouse_exited"]
