@@ -6,4 +6,9 @@ This is a copy of the Nintendo's minesweeper clone in Skyward Sword. It is ident
 
 In the default version you can play the game just like minesweeper clicking on tiles to reveal and it will count up your points. Unlike normal minesweeper there are no flags so you only need to avoid cliking on tiles that you belive have a bomb.
 
+# Difficulty
+- Beginner has 4 bombs
+- Intermediate has 4 bombs and 4 rupors
+- -Expert has 8 bombs and 8 rupors
+
 In solver mode, you input the values of tiles you have revealed in a game and it tells you the safest squares to check next.
